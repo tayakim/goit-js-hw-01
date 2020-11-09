@@ -51,7 +51,7 @@ let message;
 
 if (userPassword === ADMIN_PASSWORD) {
     message = ACCESS_IS_ALLOWED;
-} else if (userPassword === null) {
+} else if (userPassword === null) { //(!userPassword)
     message = CANCELED_BY_USER;
 } else {
     message = ACCESS_DENIED;
@@ -85,7 +85,7 @@ let message;
 
 if (orderPieces >= 8) {
     message = ACCESS_DENIED;
-} else if (orderPieces === null) {
+} else if (orderPieces === null) { //(!orderPieces)
     message = CANCELED_BY_USER;
 } else {
     message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
@@ -120,7 +120,7 @@ let message;
 let price = 0;
 let country;
 
-if (countryName === null) {
+if (countryName === null) { //(!countryName)
     message = CANCELED_BY_USER;
 } else {
     country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase(); // форматируем название страны
